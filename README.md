@@ -84,7 +84,7 @@ npm install npm@latest -g
 ```
 * insomnia
 
-Insomnia is a development application made for testing APIs. It can be installed through their [Website](https://insomnia.rest/download/core/) or by other methods [here](https://support.insomnia.rest/article/23-installation).
+ Insomnia is a development application made for testing APIs. It can be installed through their [Website](https://insomnia.rest/download/core/) or by other methods [here](https://support.insomnia.rest/article/23-installation).
 
 ### Installation
 
