@@ -1,6 +1,8 @@
 const express = require('express');
+const cors = require('cors');
 const app = express();
 const bodyParser = require('body-parser');
+const { json } = require('body-parser');
 
 const port = 3000;
 
@@ -11,6 +13,7 @@ const db = new sqlite.Database('./database.db');
 
 // 14/09/2020
 
+app.use(cors());
 app.use(bodyParser.json());
 
 app.get('/', (req, resp) => {
@@ -66,8 +69,7 @@ app.put('/tarefas/:taskId', (req, resp) => {
       SET titulo = ?
       WHERE id = ?`,
     [req.body.titulo,
-      req.params.taskId
-    ],
+      req.params.taskId],
     err => {
       if (err) {
         console.log(err);
@@ -78,6 +80,31 @@ app.put('/tarefas/:taskId', (req, resp) => {
 
   resp.status(200).send('task Updated');
 })
+
+// 16/09/2020
+
+app.get('/tarefas/:tasklId', (req,resp) => {
+  db.get(
+    `SELECT
+      *
+    FROM
+      TAREFAS
+    WHERE
+      id = ?`,
+    [req.params.taskId],
+    (err,row) => {
+      if (err) {
+        console.log(err);
+        process.exit(1);
+      }
+      resp.send(JSON.stringify({
+        Result: row
+      }))
+    }
+  );
+})
+
+
 
 app.listen(port, () => console.log('FOI'));
 // ---
