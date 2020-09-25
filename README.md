@@ -7,7 +7,7 @@
 
 
 
-<!-- PROJECT LOGO -->
+
 <br />
 <p align="center">
   <a href="https://github.com/Joaquim09Castro/rest_api_exercise">
@@ -19,7 +19,7 @@
   <br>
 
   <p align="center">
-    YOUR_SHORT_DESCRIPTION
+    SIMPLE TASK LIST REST API
     <br />
     <a href="https://github.com/Joaquim09Castro/rest_api_exercise"><strong>Explore the docs »</strong></a>
     <br />
@@ -34,7 +34,6 @@
 
 
 
-<!-- TABLE OF CONTENTS -->
 ## Table of Contents
 
 * [About the Project](#about-the-project)
@@ -51,25 +50,14 @@
 
 
 
-<!-- ABOUT THE PROJECT -->
+
 ## About The Project
 
-[![Product Name Screen Shot][product-screenshot]](https://example.com)
-
-Here's a blank template to get started:
-**To avoid retyping too much info. Do a search and replace with your text editor for the following:**
-`github_username`, `repo`, `twitter_handle`, `email`
-
-
-### Built With
-
-* []()
-* []()
-* []()
+This project was made as part of the Resilia WebDevelopment course, as a way to learn and practice the making of a rest API.
 
 
 
-<!-- GETTING STARTED -->
+---
 ## Getting Started
 
 To get a local copy up and running follow these simple steps.
@@ -99,23 +87,51 @@ npm install
 
 
 
-<!-- USAGE EXAMPLES -->
+---
 ## Usage
 
-Use this space to show useful examples of how a project can be used. Additional screenshots, code examples and demos work well in this space. You may also link to more resources.
 
-_For more examples, please refer to the [Documentation](https://example.com)_
+1. Start up the server
+```bash
+npm start
+```
+
+2. Enter the especific url on your insomnia based on the choosen method
+
+- GET:
+
+  `https://localhost:3000`
+
+- POST:
+
+  `https://localhost:3000/tarefas`
+
+_The POST method **REQUIRES A JSON** as body, with the following syntax_:
+```json
+{
+	"titulo": "Task title",
+	"descricao": "Task description",
+	"status": "Task current status"
+}
+```
+
+- PUT & DELETE:
+
+  `https://localhost:3000/tarefas/[taskId]`
+
+_insert the task identifier in place of [taskId] to perform the desired method_
+
+_the PUT method **REQUIRES A JSON** as body, with the desired changes in it_
 
 
-
-<!-- ROADMAP -->
+---
 ## Roadmap
 
 See the [open issues](https://github.com/Joaquim09Castro/rest_api_exercise/issues) for a list of proposed features (and known issues).
 
 
 
-<!-- CONTRIBUTING -->
+---
 ## Contributing
 
 Contributions are what make the open source community such an amazing place to be learn, inspire, and create. Any contributions you make are **greatly appreciated**.
@@ -128,14 +144,14 @@ Contributions are what make the open source community such an amazing place to b
 
 
 
-<!-- LICENSE -->
+---
 ## License
 
 Distributed under the Unlicense License. See `LICENSE` for more information.
 
 
 
-<!-- CONTACT -->
+---
 ## Contact
 
 Joaquim Rodrigo Moraes de Castro - [Joaquim Rodrigo](https://www.facebook.com/JokasRodrigo) - joaquimcastro2909@gmail.com
@@ -144,12 +160,8 @@ Project Link: [https://github.com/Joaquim09Castro/rest_api_exercise](https://git
 
 
 
-<!-- ACKNOWLEDGEMENTS -->
+---
 ## Acknowledgements
-
-* []()
-* []()
-* []()
 
 
 
